@@ -2,10 +2,30 @@ body {
     background-color: lightblue;
 }
 
-.nav-header {
-    background-color: greenyellow;
+nav {
+    background-color: lightcoral;
+    color: blue;
 }
 
-.nav-items {
-    color: blue;
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar li {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.nav-item {
+    float: right;
+}
+
+.nav-name {
+    float: left;
+    
 }
