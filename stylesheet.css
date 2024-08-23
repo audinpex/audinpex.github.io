@@ -1,10 +1,7 @@
 body {
     background-color: lightblue;
-}
-
-nav {
-    background-color: lightcoral;
-    color: blue;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar {
@@ -12,13 +9,23 @@ nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: aquamarine;
+    color: blue;
 }
 
-.nav-bar li {
+.nav-bar li a {
     display: block;
     text-align: center;
     text-decoration: none;
     padding: 20px;
+}
+
+.nav-item:hover {
+    background-color: rgb(71, 244, 186);
+}
+
+.nav-bar li a:visited {
+    color:blue;
 }
 
 .nav-item {
@@ -27,5 +34,8 @@ nav {
 
 .nav-name {
     float: left;
-    
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
 }
