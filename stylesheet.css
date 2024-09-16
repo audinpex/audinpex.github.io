@@ -4,14 +4,6 @@ body {
     max-width: 100%;
 }
 
-h2 {
-    font-size: 35px;
-}
-
-h3 {
-    font-size: 25px;
-}
-
 .nav-bar {
     list-style-type: none;
     margin-left: -40px;
@@ -57,4 +49,8 @@ h3 {
 .paper {
     max-width: 650px;
     font-size: 17px;
+}
+
+.code {
+    max-width: 750px;
 }

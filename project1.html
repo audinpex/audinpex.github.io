@@ -14,22 +14,30 @@
     </ul>
 </nav>
 <body>
-    <h2>Project 1 Title</h2>
-    <h3>Introduction</h3>
-    <!--this isn't finished I'm just calling it quits for the night because it is 1:30am and I am not getting anything done-->
-    <p class="paper"> A study on mental health [by who] found that as of 2021, more than 60% of students met the criteria for one or more mental health problems,
-        an increase of 50% from 2013 (cite source). {explain care about mental health} This analysis aims to see how other factors outside of
-        {whatever you call gender and race and stuff} impact student mental health. Are students engaging in sports less likely to feel depressed?
+    <h1>IT Student Engagement and Mental Wellness</h1>
+    <h2>Introduction</h2>
+    <p class="paper">Data gathered from the Healthy Minds Study and analyzed by Lipson et. al found that as of 2021, more than 60% of students met the criteria for one or more mental health problems,
+        an increase of 50% from 2013. With this negative trend, it is more important than ever to find ways to improve student mental health.
+        With a better understanding of what types of students struggle the most with mental illness, it may be easier to develop programs to
+        support those most in need. This analysis aims to see how other factors outside of
+        predetermined demographic information impact student mental health. Are students engaging in sports less likely to feel depressed?
         Do students living on campus feel less isolated? How does academic year affect anxiety? These are the types of questions this analysis seeks to answer.</p>
-    <h3>Dataset</h3>
+    <h2>Dataset</h2>
     <a href="https://www.kaggle.com/datasets/abdullahashfaqvirk/student-mental-health-survey/data">Link to Dataset</a>
     <p class="paper">The dataset used for this analysis was a dataset titled “Student Mental Health Survey” sourced from Kaggle.
         The data was “gathered via electronic surveys distributed to IT students” and includes multiple measurements of mental health and wellness.
         Features with a potential impact on mental health include gender, age, university, type of degree, major, GPA, residential status,
-        campus discrimination, engagement with sports, average sleep, and stress relief activities. Minimal pre-processing was required.
+        campus discrimination, engagement with sports, average sleep, and stress relief activities. Minimal general pre-processing was required.
         The dataset described itself as cleaned, and a review confirmed that there were no anomalies or missing information in the data.</p>
-        <p>DETAIL PRE-PROCESSING ON AVGS AND WHAT I DID FOR THE LAST ONE</p>
-    <h3>Sports Engagement vs Depression, Anxiety, and Isolation</h3>
+    <p class="paper">Pre-processing for the individual graphs was largely in two steps: collating the data into groups based on responses, and averaging
+        their mental health responses. The sum of unique values was used to find the average respondent score.</p>
+    <p class="paper">Pre-processing for the analysis of stress relief activities required additional work. Each entry containing more than one stress relief
+        activity was searched and split on commas to identify which stress relief activities were included in the list. The numeric values of each entry
+        were then added to the entry collecting all instances of one stress relief activity, including their counts. As such, any entry containing
+        more than one activity was counted multiple times to show the average for each different activity.</p>
+    <img class="code" src="stress_relief_code.png">
+
+    <h2>Sports Engagement vs Depression, Anxiety, and Isolation</h2>
     <p class="paper">One interesting correlation was between the average number of times students
         engaged with sports per week and their reported anxiety, depression, and isolation.</p>
     <img src="sports_mental_health_avgs.png">
@@ -42,7 +50,8 @@
         students engaging in sports seven or more times per week are more likely to be students specifically involved in competitive college athletics.
         These students may experience more stress related to their athletic activities in comparison to students participating in club or
         intramural sports who may participate for fun or health instead of a scholarship or potential career.</p>
-    <h3>Academic Year vs Depression, Anxiety, and Isolation</h3>
+
+    <h2>Academic Year vs Depression, Anxiety, and Isolation</h2>
     <p class="paper">There was a substantial correlation between the academic year of students and their reported anxiety, depression, and isolation.</p>
         <img src="academic_year_mental_health_avgs.png">
         <p class="paper">On average, students felt the least depressed, anxious, and isolated during their second academic year. They felt worse during their
@@ -53,7 +62,8 @@
             The final year of a college degree may bring a special project that requires additional time beyond traditional courses, restricting time for stress relief;
             students may be focusing on their final courses before graduation, reducing time for non-academic activities; or students may be worried about
             their plans after graduation, whether they are looking for or preparing to look for a job or attempting to get into a post-graduate program.</p>
-    <h3>Residential Status vs Depression, Anxiety, and Isolation</h3>
+
+    <h2>Residential Status vs Depression, Anxiety, and Isolation</h2>
     <p class="paper">The difference in reported depression, anxiety, and isolation between students living on-campus and off-campus is minor but worth noting.</p>
     <img src="residential_mental_health_avgs.png">
     <p class="paper">While average reported depression is similar between students living on- and off-campus, the average reported isolation and anxiety
@@ -61,8 +71,9 @@
         living on campus, the decrease in isolation and anxiety could potentially be due to students living on campus having easier access to campus resources
         and being closer to activities and student life that make it easier for students to engage with other students and feel less isolated. This indicates
         that requiring on-campus housing for first-year students is likely to have a positive effect on their well-being.</p>
-    <h3>Stress Relief Activities vs Depression, Anxiety, and Isolation</h3>
-    <p class="paper">INSERT INTRO TO STRESS RELIEF ACTIVITIES AND A BIT MORE DETAIL ON WHY ITS HOW IT IS</p>
+    
+    <h2>Stress Relief Activities vs Depression, Anxiety, and Isolation</h2>
+    <p class="paper">The different ways students sought relief from stress may be related to their overall mental wellness.</p>
     <img src="stress_relief_mental_health_avgs.png">
     <p class="paper">Excluding “nothing”, which only one respondent selected, the stress relief activity correlated with highest levels of depression,
         anxiety, and isolation was “creative outlets.” The stress relief activity correlated with the lowest levels of depression, anxiety, and isolation
@@ -77,9 +88,26 @@
         than “outdoor activities” and as such report their higher levels of distress, or that non-sport outdoor activities are less stressful and thus
         better at reducing anxiety. Without more information on what students considered “sports and fitness” versus “outdoor activities”,
         it is difficult to draw more certain conclusions.</p>
-    <h3>Impact</h3>
-    <p class="paper">INSERT IMPACT</p>
-    <a href="">Link to Jupyter Notebook on GitHub</a>
+
+    <h2>Impact</h2>
+    <p class="paper">There is more good than harm to be done with this data. Understanding which students need additional support to be healthy
+        and successful students can allow institutions to create programs to specifically aid students who are more likely to be struggling
+        or to adjust existing programs to help more students. Knowing that students in their last years of college may be experiencing more
+        stress could help lead to targeted aid campaigns to encourage the students to seek help when they need it. While the information
+        on stress relief activities may not be immediately actionable, knowing what activities are most likely to help students' mental
+        health may inform better event planning in the future.</p>
+    <p class="paper">One potential harm from this data is the potential for this information to be used as an excuse to ignore certain
+        student populations who appear to be doing better in relation to their peers, or to think the student mental health crisis
+        is not as bad as it seems. As these numbers are averages, they could be interpreted as the most common number instead of
+        the middle ground between students doing well and students struggling.</p>
+    <p class="paper">This data is also limited. There were only 88 clean responses to the survey; there were only four majors listed,
+        all of which being information technology majors and two of which having less than ten responses each; and multiple
+        features not analyzed in this data were spread unevenly in similar ways. This may help the assessed colleges'
+        IT programs find which student programs to give additional support to, but any further decisions would require additional research.</p>
+    <h3>Links</h3>
+    <p><a href="Project 1 stuff.ipynb">Link to Jupyter Notebook on GitHub</a></p>
+    <p><a href="https://www.kaggle.com/datasets/abdullahashfaqvirk/student-mental-health-survey/data">Link to Dataset</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0165032722002774#s0080">Healthy Minds Study analysis</a></p>
 
 </body>
 </html>
