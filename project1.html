@@ -15,20 +15,21 @@
 </nav>
 <body>
     <h2>Project 1 Title</h2>
-    <h4>Introduction</h4>
+    <h3>Introduction</h3>
     <!--this isn't finished I'm just calling it quits for the night because it is 1:30am and I am not getting anything done-->
     <p class="paper"> A study on mental health [by who] found that as of 2021, more than 60% of students met the criteria for one or more mental health problems,
         an increase of 50% from 2013 (cite source). {explain care about mental health} This analysis aims to see how other factors outside of
         {whatever you call gender and race and stuff} impact student mental health. Are students engaging in sports less likely to feel depressed?
         Do students living on campus feel less isolated? How does academic year affect anxiety? These are the types of questions this analysis seeks to answer.</p>
-    <h4>Dataset</h4>
+    <h3>Dataset</h3>
     <a href="https://www.kaggle.com/datasets/abdullahashfaqvirk/student-mental-health-survey/data">Link to Dataset</a>
     <p class="paper">The dataset used for this analysis was a dataset titled “Student Mental Health Survey” sourced from Kaggle.
         The data was “gathered via electronic surveys distributed to IT students” and includes multiple measurements of mental health and wellness.
         Features with a potential impact on mental health include gender, age, university, type of degree, major, GPA, residential status,
         campus discrimination, engagement with sports, average sleep, and stress relief activities. Minimal pre-processing was required.
         The dataset described itself as cleaned, and a review confirmed that there were no anomalies or missing information in the data.</p>
-    <h4>Sports Engagement vs Depression, Anxiety, and Isolation</h4>
+        <p>DETAIL PRE-PROCESSING ON AVGS AND WHAT I DID FOR THE LAST ONE</p>
+    <h3>Sports Engagement vs Depression, Anxiety, and Isolation</h3>
     <p class="paper">One interesting correlation was between the average number of times students
         engaged with sports per week and their reported anxiety, depression, and isolation.</p>
     <img src="sports_mental_health_avgs.png">
@@ -36,11 +37,49 @@
         per week and from one to three instances of sports engagement per week to four to six instances of sports engagement per week, while anxiety
         remains steady between no sports engagement and one to three instances of sports engagement per week, decreasing at four to six instances of
         sports engagement per week. This would suggest that the more often a student engages in sports, the less depressed, anxious, and isolated they would feel.</p>
-    
-        <p class="paper">The increase in reported depression, anxiety, and isolation at seven or more times engaging with sports per week from four to six times
-            engaging with sports per week suggests more to the relationship between sports and mental health. One possible explanation for this could be that
-            students engaging in sports seven or more times per week are more likely to be students specifically involved in competitive college athletics.
-            These students may experience more stress related to their athletic activities in comparison to students participating in club or
-            intramural sports who may participate for fun or health instead of a scholarship or potential career.</p>
+    <p class="paper">The increase in reported depression, anxiety, and isolation at seven or more times engaging with sports per week from four to six times
+        engaging with sports per week suggests more to the relationship between sports and mental health. One possible explanation for this could be that
+        students engaging in sports seven or more times per week are more likely to be students specifically involved in competitive college athletics.
+        These students may experience more stress related to their athletic activities in comparison to students participating in club or
+        intramural sports who may participate for fun or health instead of a scholarship or potential career.</p>
+    <h3>Academic Year vs Depression, Anxiety, and Isolation</h3>
+    <p class="paper">There was a substantial correlation between the academic year of students and their reported anxiety, depression, and isolation.</p>
+        <img src="academic_year_mental_health_avgs.png">
+        <p class="paper">On average, students felt the least depressed, anxious, and isolated during their second academic year. They felt worse during their
+            first academic year, reported similar levels of isolation, anxiety, and depression during their third year, and felt the most depressed, isolated,
+            and anxious during their fourth year.</p>
+        <p class="paper">The higher levels of depression, anxiety, and isolation in a student's first year can be attributed to the new environment, schedule,
+            and stressors that come with their first year of college. The higher reported levels in the fourth year have similar possible explanations.
+            The final year of a college degree may bring a special project that requires additional time beyond traditional courses, restricting time for stress relief;
+            students may be focusing on their final courses before graduation, reducing time for non-academic activities; or students may be worried about
+            their plans after graduation, whether they are looking for or preparing to look for a job or attempting to get into a post-graduate program.</p>
+    <h3>Residential Status vs Depression, Anxiety, and Isolation</h3>
+    <p class="paper">The difference in reported depression, anxiety, and isolation between students living on-campus and off-campus is minor but worth noting.</p>
+    <img src="residential_mental_health_avgs.png">
+    <p class="paper">While average reported depression is similar between students living on- and off-campus, the average reported isolation and anxiety
+        is lower in students living on-campus. While the small scale of the data makes it hard to determine, only about one quarter of the respondents
+        living on campus, the decrease in isolation and anxiety could potentially be due to students living on campus having easier access to campus resources
+        and being closer to activities and student life that make it easier for students to engage with other students and feel less isolated. This indicates
+        that requiring on-campus housing for first-year students is likely to have a positive effect on their well-being.</p>
+    <h3>Stress Relief Activities vs Depression, Anxiety, and Isolation</h3>
+    <p class="paper">INSERT INTRO TO STRESS RELIEF ACTIVITIES AND A BIT MORE DETAIL ON WHY ITS HOW IT IS</p>
+    <img src="stress_relief_mental_health_avgs.png">
+    <p class="paper">Excluding “nothing”, which only one respondent selected, the stress relief activity correlated with highest levels of depression,
+        anxiety, and isolation was “creative outlets.” The stress relief activity correlated with the lowest levels of depression, anxiety, and isolation
+        is “social connections”, with no averages reaching 3.0. This is a reasonable correlation, as it makes sense that relieving stress through social
+        connections would result in feeling less isolated. Additionally, depression and anxiety can make socializing more difficult, so students experiencing
+        higher levels of depression and anxiety may be less likely to seek stress relief through social connections.</p>
+    <p class="paper">The second-highest levels of depression and isolation being associated with “sports and fitness” is an unexpected result, given that
+        involvement with sports was earlier correlated with less anxiety and depression. The stress relief activity correlated with the second-lowest
+        levels of depression, anxiety, and isolation is “outdoor activities”, a probable result on its own but more interesting when combined with
+        the high depression, anxiety, and isolation reported by students who used “sports and fitness” as a stress relief activity. It could be that
+        students who fell into the 7+ sports engagements per week category are more likely to select “sports and fitness” as a stress relief activity
+        than “outdoor activities” and as such report their higher levels of distress, or that non-sport outdoor activities are less stressful and thus
+        better at reducing anxiety. Without more information on what students considered “sports and fitness” versus “outdoor activities”,
+        it is difficult to draw more certain conclusions.</p>
+    <h3>Impact</h3>
+    <p class="paper">INSERT IMPACT</p>
+    <a href="">Link to Jupyter Notebook on GitHub</a>
+
 </body>
 </html>

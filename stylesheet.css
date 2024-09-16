@@ -1,6 +1,15 @@
 body {
     background-color: lightblue;
     margin-left: 40px;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
 }
 
 .nav-bar {
@@ -13,11 +22,9 @@ body {
     margin-top: -10px;
     overflow: hidden;
     background-color: aquamarine;
+    font-size: 18px;
     color: blue;
-}
-
-.paper {
-    max-width: 650px;
+    max-width: 100%;
 }
 
 .nav-bar li a {
@@ -45,4 +52,9 @@ body {
     text-align: center;
     text-decoration: none;
     padding: 20px;
+}
+
+.paper {
+    max-width: 650px;
+    font-size: 17px;
 }
