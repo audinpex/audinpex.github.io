@@ -14,9 +14,30 @@
     </ul>
 </nav>
 <body>
-    <p>Insert paper here</p>
-
+    <h2>Introduction</h2>
+    <p class="paper">Something about phishing</p>
+    <h2>Dataset</h2>
+    <p><a href="https://www.kaggle.com/datasets/winson13/dataset-for-link-phishing-detection">Link to Dataset</a></p>
+    <p class="paper">The dataset has a bunch of analysis about urls and their characteristics as well as whether they are a phishing link or not</p>
+    <p class="paper">Pre-processing: no nulls, removed unexplained first column, actual url, some fields that were 0 for all entries, and cleaned up "domain_with_copyright".
+        Idk what it was but it was inconsistent between integers 1 and 0 and the strings one, zero, One, and Zero. [maybe insert code screenie]</p>
+    <h2>Model</h2>
+    <p class="paper">I did forest because it seemed best. Naive Bayes could have worked with total_of_symbol variables but it would have been harder to set up. SVM would
+        be better with variables that were more consistantly above zero. Explain why KNN is stupid here.</p>
+    <p class="paper">Explain my metrics</p>
+    <p class="paper">Storytelling????? I guess????? Idk get metrics on most important variables ig</p>
+    <h2>Impact</h2>
+    <p class="paper">As useful as improved phishing detection could be, it is not without risk. The benefits of
+        improved phishing detection algorithms are making client-side programs more effective at blocking these sites,
+        helping email clients sort out emails with phishing links from emails with legitimate links, and potentially helping
+        end users better identify what makes a link or url more likely to be unsafe. However, if this were to reach
+        phishers, they could use the information gained from this research to "improve" their links and make them harder to recognize.
+        This does not make these results irrelevant, the continued presence of older variants of malware in addition to new threats
+        makes it likely that even as some phishers change their urls to avoid detection, many will still be blocked.
+    </p>
+    
+    <h3>Links</h3>
     <p><a href="project 2 notebook start.ipynb"></a>Link to Jupyter Notebook on GitHub</a></p>
-    <p><a href="https://www.kaggle.com/datasets/winson13/dataset-for-link-phishing-detection">Link to [dataset] on Kaggle</a></p>
+    <p><a href="https://www.kaggle.com/datasets/winson13/dataset-for-link-phishing-detection">Link to Dataset</a></p>
 </body>
 </html>
