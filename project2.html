@@ -14,6 +14,7 @@
     </ul>
 </nav>
 <body>
+    <h1>Phishing Link Classification</h1>
     <h2>Introduction</h2>
     <p class="paper">Something about phishing</p>
     <h2>Dataset</h2>
@@ -24,9 +25,8 @@
         were removed due to all entries having a value of 0. The last major step in pre-processing was the standardization of the "domain_with_copyright" field.
         Most entries had either the numeric value of 0 or 1, but some had "zero" or "one" instead. The code used to replace any strings with numbers is shown below:
     </p>
-    <img src="domain_with_copyright_cleaning.png">
-    <p class="paper">Pre-processing: no nulls, removed unexplained first column, actual url, some fields that were 0 for all entries, and cleaned up "domain_with_copyright".
-        Idk what it was but it was inconsistent between integers 1 and 0 and the strings one, zero, One, and Zero. [maybe insert code screenie]</p>
+    <img src="domain_with_copyright_cleaning.png" style="max-width:700px">
+    <p class="paper">The variable "error" was used to check for values that were not "one" or "zero" so that I could handle them manually. None were found.</p>
     <h2>Model</h2>
     <p class="paper">I did forest because it seemed best. Naive Bayes could have worked with total_of_symbol variables but it would have been harder to set up. SVM would
         be better with variables that were more consistantly above zero. Explain why KNN is stupid here.</p>
