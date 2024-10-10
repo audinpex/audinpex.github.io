@@ -19,6 +19,12 @@
     <h2>Dataset</h2>
     <p><a href="https://www.kaggle.com/datasets/winson13/dataset-for-link-phishing-detection">Link to Dataset</a></p>
     <p class="paper">The dataset has a bunch of analysis about urls and their characteristics as well as whether they are a phishing link or not</p>
+    <p class="paper">Pre-processing of the data required multiple steps. There were no entires with null values, but not all fields contained
+        useful data. The first two, an undescribed integer and the url itself, were removed for not providing additional information. Multiple other fields
+        were removed due to all entries having a value of 0. The last major step in pre-processing was the standardization of the "domain_with_copyright" field.
+        Most entries had either the numeric value of 0 or 1, but some had "zero" or "one" instead. The code used to replace any strings with numbers is shown below:
+    </p>
+    <img src="domain_with_copyright_cleaning.png">
     <p class="paper">Pre-processing: no nulls, removed unexplained first column, actual url, some fields that were 0 for all entries, and cleaned up "domain_with_copyright".
         Idk what it was but it was inconsistent between integers 1 and 0 and the strings one, zero, One, and Zero. [maybe insert code screenie]</p>
     <h2>Model</h2>
