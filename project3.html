@@ -19,16 +19,25 @@
     <p class="paper">Explain the project. Explain housing prices. Explain dataset features.</p>
     <p class="paper">Explain linear regression. Explain math if time.</p>
     <h2>Blanket Pre-Processing</h2>
-    <p class="paper">Explain that I yeeted all the non-continuous features because I'm doing linear regression</p>
+    <p class="paper">In order to </p>
     <h2>Experiment 1: All Continuous Features, Rows with Nulls Dropped</h2>
-    <p class="paper">Explain my stupid-ass first experiment of throwing literally everything into the model and
-        deleting the rows with missing data.
+    <p class="paper">First experiment involved creating a model with all remaining features of the dataset as a starting point.
+        Any rows containing null values were removed, about 300 rows. I chose to work this way I don't want to deal with
+        having to do averages and this was easy and this isn't the final experiment anyway.
     </p>
-    <p class="paper">Explain the accuracy metrics</p>
+    <p class="paper">The coefficient of determination, the [explain], for this model was 0.799. [explain what that means.]
+        The mean squared error, the [explain], for this model was 1,588,229,760.73. [what is this]. The root mean squared error was
+        39,852.60. This represents that the average distance between a data point's estimated value based on the model and
+        the actual value is 39,852.60. [explain context]
+    </p>
     <h2>Experiment 2: All Continuous Features, Columns with Nulls Dropped</h2>
-    <p class="paper">Explain my sligthly less stupid experiment where instead of deleting rows with missing data,
-        I removed the columns to see if a larger number of [whatever the fcuk rows are formally called] would
-    improve the data at all.</p>
-    <p class="paper">Explain the accuracy metrics</p>
+    <p class="paper">The second experiment used most of the same features as the first experiment. However, instead of dropping
+        rows with missing values, I dropped the two columns with the largest number of missing values: MasVnrType and BsmtExposure.
+        I also deleted the three rows with missing values in the column MasVnrArea. I chose to try this to see if having more records
+        would be more beneficial than having the additional features.
+    </p>
+    <p class="paper">The coefficient of determination for this model was 0.848. The mean squared error was 930,983,000.66 and
+        the root mean squared error was 30,512.02. [talk about hwo this is a lot better]
+    </p>
 </body>
 </html>
