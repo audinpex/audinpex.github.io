@@ -20,18 +20,29 @@
     <h2>Dataset</h2>
     <a href="https://www.kaggle.com/datasets/vishakhdapat/customer-segmentation-clustering/data">Link to Dataset</a>
     <p class="paper">Introduce and explain data</p>
-    <p class="paper">Dataset is examination of customer profiles. Feature list. Explain acceptedcmp and z features.</p>
-
+    <p class="paper">The dataset contains customer profiles that can be used to (talk about using them for marketing and stuff)
+        Some of the features are customer birth year, number of children or teens living with the customer, the customer's income,
+        how long since the last transaction, the amount spent on one of several categories of product (wine, fruit, meat, fish, sweet, and "gold"),
+        the number of purchases made through the website or physical store, and whether the customer accepted specific marketing campaigns.
+    </p>
+    <img src="first_reduced_pairplot.png" class="oversized">
     <p class="paper">Discuss pre-processing</p>
-    <p class="paper">Dropped ID for providing no information, dropped Z_CostContact and Z_Revenue for being constant for all responses.</p>
-    <p class="paper">Dropped "AcceptedCmp" columns, Complain, and Response columns for being present in less than 25% of entries. Does not provide important data for clustering.</p>
-    <p class="paper">Dropped Kidhome and Teenhome columns for similar reasons, having low variance and no clear correlation between it and other values.</p>
-    <p class="paper">Dropped 24 records for having null values for income.</p>
     <p class="paper">Dropped education, marital status, and customer date for being non-numeric and difficult to implement for clustering</p>
+    <p class="paper">The first columns dropped were ID, Z_CostContact, and Z_Revenue, as none of these provide specific information. All "AcceptedCMP"
+        columns, recording whether the customer accepted a marketing campaign, were dropped due to all being present in less than 25% of the records.
+        Complain and Response columns were also dropped due to low prevalence. Columns on number of kids and teens living with the customer were removed due to low variance.
+        Education, marital status, and customer join date were dropped for being non-numeric and more difficult to parameterize for clustering.
+        Finally, 24 records were then dropped for having no value for income. One record where the income was entered as 666666 was removed for being multiple
+        times larger than the next-highest income, potentially skewing results.
+    </p>
 
     <h2>Modeling</h2>
     <p class="paper">Explain k-clustering and why I chose it</p>
     <p class="paper">Insert images and describe clusters</p>
+    <img class="oversized" src="first_boxplots.png">
+    <p class="paper">Explain this one</p>
+    <img class="oversized" src="second_boxplots.png">
+    <p class="paper">Explain this one</p>
     <h2>Impact</h2>
     <p class="paper">Discuss impact</p>
     <p class="paper">For the company, positive impact of more targeted marketing potentially leading to higher revenue. Can focus on customers more likely to spend more.</p>

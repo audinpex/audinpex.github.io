@@ -54,3 +54,7 @@ body {
 .code {
     max-width: 750px;
 }
+
+.oversized {
+    max-width:80%;
+}
